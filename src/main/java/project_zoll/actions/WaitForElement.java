@@ -21,7 +21,7 @@ public class WaitForElement {
         Duration timeOut;
         public WaitForElement(WebDriver driver, int timeOut){
             this.driver=driver;
-            this.timeOut= Duration.ofDays(timeOut);
+            this.timeOut= Duration.ofSeconds(timeOut);
         }
 
         public void waitForElement(By by) {

@@ -1,9 +1,8 @@
-package project_zoll.test;
+package project_zoll.test.other_tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -32,22 +31,24 @@ public class ClickOnElementTest {
         driver = new ChromeDriver(options);
 
     }
-        @Test
 
-        public void clickOnLanguage () throws InterruptedException {
+    @Test
 
-          ClickOnElement.clickOn(driver);
+    public void clickOnLanguage() throws InterruptedException {
+
+        ClickOnElement.clickOn(driver);
 
 
-
-        }
-
-     @AfterSuite
-
-    public void tearDown() throws InterruptedException {
-
-        
-        driver.quit();
-     }
     }
+
+}
+
+//     @AfterSuite
+//
+//    public void tearDown() throws InterruptedException {
+//
+//
+//        driver.quit();
+//     }
+//    }
 

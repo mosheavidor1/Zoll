@@ -25,7 +25,7 @@ public class TextActions {
 
     public static String GetText(WebDriver driver) {
         Logger logger = Logger.getLogger(TextActions.class.getName());
-        WaitForElement wait = new WaitForElement(driver, 30);
+        WaitForElement wait = new WaitForElement(driver, 5);
 
         try {
             //Getting the translated text to view on console.

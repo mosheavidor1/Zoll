@@ -25,7 +25,7 @@ public class LanguageElements {
 
 
     //Print the text to the consul
-    public  static  final  String PRINT_TEXT="//span[@class='ryNqvbn']";
+    public  static  final  String PRINT_TEXT="//span[@class='ryNqvb']";
 
 
 

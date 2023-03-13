@@ -2,6 +2,7 @@ package project_zoll.actions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import project_zoll.infra.file_properties.LanguageElements;
 import project_zoll.infra.file_properties.TranslateProperites;
 
@@ -27,12 +28,6 @@ public class TranslateFromFile {
         TextActions.GetText(driver);
 
 
-
-
     }
 
-
 }
-
-
-
