@@ -2,20 +2,22 @@ package project_zoll.actions.other_tests_actions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import project_zoll.actions.WaitForElement;
 
 public class SeleniumGeneralPractice {
 
-WebDriver driver;
+    WebDriver driver;
 
 
-    public void click(WebDriver driver){
+    public void click(WebDriver driver) {
 
-        this.driver=driver;
+        this.driver = driver;
 
         driver.get("https://google.com");
         driver.manage().window().fullscreen();
-        WaitForElement wait= new WaitForElement(driver,30);
+        WaitForElement wait = new WaitForElement(driver, 30);
         wait.waitForElement(By.name("q"));
         driver.findElement(By.name("q")).click();
         driver.findElement(By.name("q")).sendKeys("This is a test");
@@ -24,8 +26,7 @@ WebDriver driver;
     }
 
 
-
-    public void switchToFrame(WebDriver driver){
+    public void switchToFrame(WebDriver driver) {
 
         driver.get("https://demo.guru99.com/test/guru99home/");
         driver.manage().window().maximize();
@@ -39,8 +40,46 @@ WebDriver driver;
 
         driver.switchTo().defaultContent();
 
+
     }
-}
+
+
+    public void Login(WebDriver driver) {
+        WaitForElement wait = new WaitForElement(driver, 30);
+        driver.get("https://pre-prod-sleep.itamar-online.com/Dashboar");
+        driver.manage().window().fullscreen();
+
+            wait.waitForElement(By.cssSelector("input[type='text']"));
+            driver.findElement(By.cssSelector("input[type='text']")).sendKeys("AvidorfTest");
+
+            wait.waitForElement(By.xpath("//input[@type='password']"));
+            driver.findElement(By.xpath("//input[@type='password']")).sendKeys("AvidorfTest123!");
+
+
+            wait.waitForElement(By.xpath("//button[@type='submit']"));
+            driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+//            wait.waitForElement(By.xpath("//span[normalize-space()='AvidorfTest']"));
+
+          wait.waitForElement(By.xpath("//span[@id=\"username\"]"));
+         WebElement userName= driver.findElement(By.xpath("//span[@id=\"username\"]"));
+         userName.getText();
+
+        System.out.println(userName.getText());
+
+         Assert.assertEquals(userName.getText(),"AvidorfTest");
+
+
+
+
+
+//   //span[normalize-space()='AvidorfTest']
+
+
+        }
+    }
+
+
 
 
 
